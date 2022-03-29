@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: labs
+      POSTGRES_PASSWORD: labs
+      POSTGRES_DB: datalabs
