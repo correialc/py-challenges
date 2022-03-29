@@ -1,6 +1,4 @@
-USE labs;
-
-CREATE TABLE beatles (
+CREATE TABLE datalabs.beatles (
 	id int not null,
     first_name varchar(10) not null,
     last_name varchar(10) null,
