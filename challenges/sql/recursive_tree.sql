@@ -1,16 +1,15 @@
-with recursive node(id, lvl) as (
-    select id, 1 as lvl 
-    from tree where pid is null
-    union all
-    select t.id, n.lvl+1 as lvl
-    from node n
-    inner join tree t
-        on n.id = t.pid
-)
-select id, 
-    case 
-        when lvl=1 then 'Root'
-        when lead(lvl) over() then 'Leaf'
-        else 'Inner'
-        end as type
-from node;
+USE labs;
+
+SELECT DISTINCT extended_node.id AS node_id, 
+    CASE 
+        WHEN extended_node.pid IS NULL THEN 'Root'
+        WHEN extended_node.child_id IS NULL THEN 'Leaf'
+        ELSE 'Inner'
+    END as node_type
+FROM 
+(   SELECT current.id, current.pid, child.id AS child_id
+    FROM node current
+    LEFT JOIN node child
+    ON current.id = child.pid
+    ) AS extended_node
+ORDER BY node_id;
