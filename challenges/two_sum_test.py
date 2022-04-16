@@ -8,5 +8,6 @@ class TestTwoSum(unittest.TestCase):
         self.assertEqual(find_two_sum([3,2,4], 6), [1,2])
         self.assertEqual(find_two_sum([2,7,11,15], 8), [])
         self.assertEqual(find_two_sum([], 5), [])
+        self.assertEqual(find_two_sum([4, 3, 4, 2, 1], 8), [0,2])
         self.assertEqual(find_two_sum([4,4], 8), [0,1])
         
