@@ -7,11 +7,18 @@ def group_anagrams(strs):
 
     # Identify anagrams
     for term in strs: 
-        anagram_base_chars = "".join(sorted(term)) 
-        if anagram_base_chars in anagrams:
-            anagrams[anagram_base_chars].append(term)
+        anagram_group_id = "".join(sorted(term)) 
+        if anagram_group_id in anagrams:
+            anagrams[anagram_group_id].append(term)
         else:
-            anagrams[anagram_base_chars] = [term]
+            anagrams[anagram_group_id] = [term]
 
-    return list(anagrams.values())
+    # Sorting results
+    for anagram_group in anagrams.values():
+        anagram_group.sort()
+
+    anagrams = list(anagrams.values())
+    anagrams.sort(key=lambda anagram_group : anagram_group[0])
+
+    return anagrams
             
