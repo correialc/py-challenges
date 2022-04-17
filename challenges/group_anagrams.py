@@ -1,16 +1,17 @@
-# Any order for each anagram
-# Any order for the list of anagrams
+# Each list of anagrams has to be sorted
+# The anagrams collection has to be sorted by the first term
 # Hash table strategy with sorting
 def group_anagrams(strs):
     
-    found_str = dict()
+    anagrams = dict()
 
-    for s in strs: 
-        base_str = "".join(sorted(s)) 
-        if base_str in found_str:
-            found_str[base_str].append(s)
+    # Identify anagrams
+    for term in strs: 
+        anagram_base_chars = "".join(sorted(term)) 
+        if anagram_base_chars in anagrams:
+            anagrams[anagram_base_chars].append(term)
         else:
-            found_str[base_str] = [s]
+            anagrams[anagram_base_chars] = [term]
 
-    return list(found_str.values())
+    return list(anagrams.values())
             
