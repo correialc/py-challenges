@@ -1,5 +1,5 @@
 import unittest
-from online_count import count_online
+from challenges.online_count import count_online
 
 class TestOnlineCount(unittest.TestCase):
 

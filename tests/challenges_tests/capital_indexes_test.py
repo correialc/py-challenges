@@ -1,5 +1,5 @@
 import unittest
-from capital_indexes import find_capital_indexes
+from challenges.capital_indexes import find_capital_indexes
 
 class TestCapitalIndexes(unittest.TestCase):
 

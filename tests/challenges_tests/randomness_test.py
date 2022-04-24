@@ -1,5 +1,5 @@
 import unittest
-from randomness import get_random_number
+from challenges.randomness import get_random_number
 
 class TestRandomness(unittest.TestCase):
 

@@ -1,5 +1,5 @@
 import unittest
-from sum_of_multiples import calc_sum_multiples 
+from challenges.sum_of_multiples import calc_sum_multiples 
 
 class TestSumMultiples(unittest.TestCase):
 

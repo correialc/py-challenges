@@ -1,5 +1,5 @@
 import unittest
-from only_ints import is_only_ints
+from challenges.only_ints import is_only_ints
 
 class TestOnlyInts(unittest.TestCase):
 

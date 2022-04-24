@@ -1,5 +1,5 @@
 import unittest
-from double_letters import find_double_letters
+from challenges.double_letters import find_double_letters
 
 class TestDoubleLetters(unittest.TestCase):
 

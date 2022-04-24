@@ -1,5 +1,5 @@
 import unittest
-from group_anagrams import group_anagrams
+from challenges.group_anagrams import group_anagrams
 
 class TestGroupAnagrams(unittest.TestCase):
 

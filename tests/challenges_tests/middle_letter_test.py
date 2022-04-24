@@ -1,5 +1,5 @@
 import unittest
-from middle_letter import find_middle_letter
+from challenges.middle_letter import find_middle_letter
 
 class TestMiddleLetter(unittest.TestCase):
 
