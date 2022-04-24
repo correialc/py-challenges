@@ -29,8 +29,19 @@ class LinkedList:
         pointer_node.next = None
         self.tail = pointer_node
         self.length-=1
-        
+
         return pop_node
+
+    def insert(self, node, index):
+        pointer_node = self.lookup(index)
+        node.next = pointer_node.next
+        pointer_node.next = node
+        self.length+=1
+
+    def delete(self, index):
+        pointer_node = self.lookup(index)
+        pointer_node.next = pointer_node.next.next
+        self.length-=1
 
     def lookup(self, index):
         if index > self.length - 1:
@@ -63,6 +74,8 @@ l = LinkedList("Google")
 l.append("Udemy")
 l.prepend("Discord")
 print(l)
-print(l.pop().value)
+l.insert(Node("Amazon"), 1)
+print(l)
+l.delete(2)
 print(l)
 
