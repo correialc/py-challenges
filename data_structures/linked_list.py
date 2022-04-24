@@ -32,10 +32,11 @@ class LinkedList:
 
         return pop_node
 
-    def insert(self, node, index):
+    def insert(self, value, index):
+        new_node = Node(value)
         pointer_node = self.lookup(index)
-        node.next = pointer_node.next
-        pointer_node.next = node
+        new_node.next = pointer_node.next
+        pointer_node.next = new_node
         self.length+=1
 
     def delete(self, index):
@@ -69,13 +70,3 @@ class LinkedList:
             node = node.next
         
         return printed_list
-
-l = LinkedList("Google")
-l.append("Udemy")
-l.prepend("Discord")
-print(l)
-l.insert(Node("Amazon"), 1)
-print(l)
-l.delete(2)
-print(l)
-
