@@ -15,6 +15,11 @@ class LinkedList:
         self.tail.next = new_node
         self.tail = new_node
 
+    def prepend(self, value):
+        new_node = Node(value)
+        new_node.next = self.head
+        self.head = new_node
+
     def __str__(self):
         
         printed_list = "\nHEAD: "+str(self.head.value)
@@ -28,8 +33,8 @@ class LinkedList:
         
         return printed_list
 
-l = LinkedList(10)
-l.append(99)
+l = LinkedList("Google")
+l.append("Udemy")
 print(l)
-l.append(35)
+l.prepend("Discord")
 print(l)
