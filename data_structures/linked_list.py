@@ -13,17 +13,42 @@ class LinkedList:
 
     def append(self, value):
         new_node = Node(value)
+        
+        if self.length == 0:
+            self.head = new_node
+            self.tail = self.head
+            self.length = 1
+            return
+        
         self.tail.next = new_node
         self.tail = new_node
         self.length+=1
 
     def prepend(self, value):
         new_node = Node(value)
+        
+        if self.length == 0:
+            self.head = new_node
+            self.tail = self.head
+            self.length = 1
+            return
+        
         new_node.next = self.head
         self.head = new_node
         self.length+=1
 
     def pop(self):
+        
+        if self.length == 0:
+            return None
+        
+        if self.length == 1:
+            pop_node = self.head
+            self.head = None
+            self.tail = None
+            self.length = 0
+            return pop_node
+
         pointer_node = self.lookup(self.length-1)
         pop_node = pointer_node.next
         pointer_node.next = None
@@ -34,12 +59,23 @@ class LinkedList:
 
     def insert(self, value, index):
         new_node = Node(value)
+        
+        if self.length == 0:
+            self.head = new_node
+            self.tail = self.head
+            self.length = 1
+            return
+        
         pointer_node = self.lookup(index)
         new_node.next = pointer_node.next
         pointer_node.next = new_node
         self.length+=1
 
     def delete(self, index):
+        
+        if self.length == 0:
+            return
+        
         pointer_node = self.lookup(index)
         pointer_node.next = pointer_node.next.next
         self.length-=1
