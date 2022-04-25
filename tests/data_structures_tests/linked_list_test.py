@@ -89,4 +89,13 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(self.list.head, None)
         self.assertEqual(self.list.tail, None)
 
+    def test_reverse(self):
+        self.list.append("Amazon")
+        self.list.append("Discord")
+        self.list.append("Udemy")
+        self.list.reverse()
+        self.assertEqual(self.list.length, 4)
+        self.assertEqual(self.list.head.value, "Udemy")
+        self.assertEqual(self.list.tail.value, "Google")
+
         

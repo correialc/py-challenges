@@ -80,6 +80,30 @@ class LinkedList:
         pointer_node.next = pointer_node.next.next
         self.length-=1
 
+    def reverse(self):
+        lead_node_index = self.length-1
+        swap_node = self.lookup(lead_node_index)
+        lag_node = self.lookup(lead_node_index-1)
+
+        swapped_nodes = 0
+
+        while swapped_nodes < self.length - 1:
+            
+            self.tail.next = swap_node
+            self.tail = swap_node
+            
+            if swap_node != self.head:
+                lag_node.next = swap_node.next
+            else:
+                self.head = swap_node.next
+
+            swap_node.next = None
+
+            swapped_nodes += 1
+            lead_node_index = self.length - 1 - swapped_nodes
+            swap_node = self.lookup(lead_node_index)
+            lag_node = self.lookup(lead_node_index-1)
+
     def lookup(self, index):
         if index > self.length - 1:
             index = self.length - 1
