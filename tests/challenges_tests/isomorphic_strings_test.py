@@ -1,5 +1,5 @@
 import unittest
-from challenges.isomorphic_strings import is_isomorphic
+from challenges.hash_table.isomorphic_strings import is_isomorphic
 
 class TestIsomorphicStrings(unittest.TestCase):
 

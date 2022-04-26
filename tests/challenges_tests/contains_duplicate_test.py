@@ -1,5 +1,5 @@
 import unittest
-from challenges.contains_duplicate import contains_duplicate
+from challenges.hash_table.contains_duplicate import contains_duplicate
 
 class TestContainsDuplicate(unittest.TestCase):
 

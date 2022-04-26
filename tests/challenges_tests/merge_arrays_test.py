@@ -1,5 +1,5 @@
 import unittest
-from challenges.merge_arrays import merge_ordered_arrays
+from challenges.two_pointers.merge_arrays import merge_ordered_arrays
 
 class TestMergeArrays(unittest.TestCase):
     

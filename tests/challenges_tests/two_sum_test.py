@@ -1,5 +1,5 @@
 import unittest
-from challenges.two_sum import find_two_sum
+from challenges.two_pointers.two_sum import find_two_sum
 
 class TestTwoSum(unittest.TestCase):
 

@@ -1,5 +1,5 @@
 import unittest
-from challenges.first_recurrent_items import find_first_recurrent_items
+from challenges.hash_table.first_recurrent_items import find_first_recurrent_items
 
 class TestFirstRecurrentItems(unittest.TestCase):
     
