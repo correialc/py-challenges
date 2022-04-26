@@ -1,5 +1,9 @@
-# Find an item on a sorted array
-# Time complexity restriction: less then O(n)
+'''
+Given a sorted array of integers and an integer called target, 
+find the element that equals to the target and return its index. 
+If the element is not found, return -1.
+'''
+# Time complexity must be less then O(n)
 # Strategy: binary search O(log(n))
 def binary_search(arr, target):
     
