@@ -1,6 +1,13 @@
-# Unsorted array
-# Can have duplicated items
-# Two pointers strategy
+'''
+Two Sum
+
+Given an array of integers sorted in ascending order, find two numbers 
+that add up to a given target. Return the indices of the two numbers 
+in ascending order. 
+
+You can assume elements in the array are unique and there is only one solution. 
+Do this in O(n) time and with constant auxiliary space.
+'''
 def find_two_sum(nums, target):
     p1 = 0
     p2 = len(nums) - 1
