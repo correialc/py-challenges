@@ -20,6 +20,3 @@ def find_longest_substring(text: str) -> int:
             right += 1 
 
     return longest
-
-if __name__ == "__main__":
-    find_longest_substring('abcdbea')
