@@ -10,8 +10,9 @@ def find_longest_substring(text: str) -> int:
             while text[left] != text[right]:
                 left+=1
             
-            left+=1
-            sub = text[left:right + 1]
+            left += 1
+            right += 1
+            sub = text[left:right]
             sub_size = len(sub)
         else:
             sub += text[right]
@@ -19,3 +20,6 @@ def find_longest_substring(text: str) -> int:
             right += 1 
 
     return longest
+
+if __name__ == "__main__":
+    find_longest_substring('abcdbea')

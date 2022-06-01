@@ -8,5 +8,7 @@ class TestLongestNonRepeatedSubstring(unittest.TestCase):
         self.assertEqual(find_longest_substring('aba'), 2)
         self.assertEqual(find_longest_substring('abccabcabcc'), 3)
         self.assertEqual(find_longest_substring('aaaabaaa'), 2)
+        self.assertEqual(find_longest_substring('a'), 1)
+        self.assertEqual(find_longest_substring(''), 0)
 
 
