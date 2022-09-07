@@ -1,3 +1,20 @@
+'''
+MINIMUM WINDOW SUBSTRING
+
+Given two strings, original and check, return the minimum substring of original such that 
+each character in check, including duplicates, are included in this substring. By "minimum", 
+I mean the shortest substring. If two substrings that satisfy the condition has the same length, 
+the one that comes lexicographically first are smaller.
+
+Parameters
+- original: The original string.
+- check: The string to check if a window contains it.
+
+Result
+- The smallest substring of original that satisfy the condition.
+
+'''
+
 from collections import Counter
 
 def get_minimum_window(original: str, check: str) -> str:
