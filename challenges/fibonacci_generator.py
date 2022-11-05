@@ -4,9 +4,9 @@ def generate_fibonacci(n):
     if n > 1:
         yield 1
 
-    last = 0
-    next = 1
+    lst = 0
+    nxt = 1
 
     for _ in range(1,n):
-        last, next = next, last + next
-        yield next
+        lst, nxt = nxt, lst + nxt
+        yield nxt

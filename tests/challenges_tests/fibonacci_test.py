@@ -1,5 +1,5 @@
 import unittest
-from challenges.fibonacci import generate_fibonacci
+from challenges.fibonacci_generator import generate_fibonacci
 
 class FibonacciTest(unittest.TestCase):
 
