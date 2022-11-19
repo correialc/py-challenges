@@ -1,13 +1,10 @@
-# Each list of anagrams has to be sorted
-# The anagrams collection has to be sorted by the first term
-# Hash table strategy with sorting
 def group_anagrams(strs):
-    
+
     anagrams = dict()
 
     # Identify anagrams
-    for term in strs: 
-        anagram_group_id = "".join(sorted(term)) 
+    for term in strs:
+        anagram_group_id = "".join(sorted(term))
         if anagram_group_id in anagrams:
             anagrams[anagram_group_id].append(term)
         else:
@@ -18,7 +15,6 @@ def group_anagrams(strs):
         anagram_group.sort()
 
     anagrams = list(anagrams.values())
-    anagrams.sort(key=lambda anagram_group : anagram_group[0])
+    anagrams.sort(key=lambda anagram_group: anagram_group[0])
 
     return anagrams
-            

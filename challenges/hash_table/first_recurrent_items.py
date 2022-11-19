@@ -1,6 +1,3 @@
-# First recurrent: sequential search O(n)
-# Evaluate previous ocurrence of an item: memoization (hash table) O(1)
-
 def find_first_recurrent_items(items):
     found_items = dict()
 
@@ -9,5 +6,5 @@ def find_first_recurrent_items(items):
             found_items[item] = True
         else:
             return item
-    
+
     return None

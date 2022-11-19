@@ -1,8 +1,5 @@
-# Traverse both strings in one single loop
-# The order of the chars in the string can not be changed
-# Hash table with Set strategy
 def is_isomorphic(str1, str2):
-    
+
     chars = dict()
     found_chars = set()
 
@@ -18,6 +15,6 @@ def is_isomorphic(str1, str2):
                 return False
             else:
                 chars[str1[i]] = str2[i]
-                found_chars.add(str2[i])     
+                found_chars.add(str2[i])
 
     return True
