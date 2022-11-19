@@ -1,5 +1,6 @@
 import unittest
-from challenges.roman_decimal import roman_decimal_decode
+from challenges.two_pointers.roman_decimal import roman_decimal_decode
+
 
 class TestRomanDecimal(unittest.TestCase):
 
